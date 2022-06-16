@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Wheat : MonoBehaviour
 {
-    [SerializeField] private int hp;
+    [SerializeField] private float hp;
     [SerializeField] private GameObject blockWheat;
     [SerializeField] private Transform mainTrans;
     private GameObject stack;
@@ -48,7 +48,7 @@ public class Wheat : MonoBehaviour
         }
         if (rise < 6)
         {
-            hp++;
+            hp+= 0.5f;
             rise++;
             mainTrans.localScale = new Vector3(mainTrans.localScale.x, mainTrans.localScale.y + 0.095f, mainTrans.localScale.z);
         }
